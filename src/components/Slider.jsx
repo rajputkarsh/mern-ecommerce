@@ -10,7 +10,7 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
-  ${mobile({ display: "none" })}
+  ${mobile({ "max-width": "100%" })}
 `;
 
 const Arrow = styled.div`
@@ -37,6 +37,7 @@ const Wrapper = styled.div`
   display: flex;
   transition: all 1.5s ease;
   transform: translateX(${(props) => props.slideIndex * -100}vw);
+  ${mobile({ "max-width": "100%" })}
 `;
 
 const Slide = styled.div`
@@ -45,15 +46,18 @@ const Slide = styled.div`
   display: flex;
   align-items: center;
   background-color: #${(props) => props.bg};
+  ${mobile({ "max-width": "100%", "margin-left": "30px" })}
 `;
 
 const ImgContainer = styled.div`
   height: 100%;
   flex: 1;
+  ${mobile({ "max-width": "100%" })}
 `;
 
 const Image = styled.img`
   height: 80%;
+  ${mobile({ "max-width": "100%" })}
 `;
 
 const InfoContainer = styled.div`
@@ -63,6 +67,7 @@ const InfoContainer = styled.div`
 
 const Title = styled.h1`
   font-size: 70px;
+  ${mobile({ "font-size": "45px" })}
 `;
 
 const Desc = styled.p`
